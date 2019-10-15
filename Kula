@@ -1,0 +1,6 @@
+        double r, objetosc;
+        Console.WriteLine("Program oblicza objetosc kuli o promieniu r,");
+        Console.WriteLine("Podaj promen r.");
+        r=double.Parse(Console.ReadLine());
+        objetosc=4.0*Math.PI*r*r*r/3;
+        Console.WriteLine("Objetosc kuli o pomieniu r={0:#.##} wynosi {1:#.##}.",r,objetosc);
