@@ -1,0 +1,14 @@
+using System;
+
+public class Program
+{	
+	public static void Main(string[] args) 
+	{ 
+		int x = 3, y = 10; 
+		bool wynik; //true lub false
+		wynik = (x >= 2 || y++ >= 2); //alternatywa warunkowa, przy koniunkcji && sprawdza tylko 1 człon i przy & obydwa nawet jesli pierwszy jest fałszywy.
+		Console.WriteLine(wynik); 
+		Console.WriteLine(x); 
+		Console.WriteLine(y);
+	}
+}
