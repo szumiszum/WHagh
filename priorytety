@@ -1,0 +1,14 @@
+using System;
+
+public class Program
+{	
+	public static void Main(string[] args) 
+	{ 
+	int x = 1, y = 2, z = 3; 
+	bool wynik; 
+	wynik = (x== 1 || y != 5 && z < 1); //najpierw koniunkcja pozniej alternatywa (priorytet)
+	//wynik = ((x == 1 || y != 5) && z < 1); 
+	//wynik = !(x == 1 || y != 5 && z < 1); 
+	Console.WriteLine(wynik);
+	}
+}
