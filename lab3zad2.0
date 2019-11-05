@@ -1,0 +1,28 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int [] liczby = new int[100];
+		int sumaP = 0, sumaNP = 0;
+		
+		for(int i = 0 ; i < 100 ; i++)
+		{
+			liczby[i] = i+1;
+			Console.Write("{0,3},", liczby[i]);
+			if ((liczby[i]%2)==0) // jeżeli element tablicy jest liczbą parzystą
+			{
+				sumaP = sumaP+liczby[i];
+			}
+			else // jeżeli nie (czyli jest liczbą nieparzystą)
+			{
+				sumaNP = sumaNP+liczby[i];
+			}
+			
+		}
+		
+		Console.WriteLine("\nSuma liczb parzystych w tablicy wynosi: {0,3}", sumaP);
+		Console.WriteLine("Suma liczb nieparzystych w tablicy wynosi: {0,3}", sumaNP);
+	}
+}
