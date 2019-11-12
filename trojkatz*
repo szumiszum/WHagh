@@ -1,0 +1,28 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int n;
+		//a
+		Console.WriteLine("Podaj rozmiar boku trójkątu równobocznego: "); 
+		n = int.Parse(Console.ReadLine()); // konwersja
+		
+		Console.WriteLine("Bok trójkątu wynosi: {0}", n);
+		
+		for (int i = 0; i < n; i++)
+		{
+			// Console.Write('*');
+			
+			for (int j = 0; j <= i; j++)
+			{
+				Console.Write('*');
+			}
+			
+			Console.WriteLine(); // przejście do nowej linii
+		}
+		
+		
+	}
+}
