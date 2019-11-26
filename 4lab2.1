@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double fahrenheit, celsius;
+		Console.Write("Podaj wartość temperatury w stopniach Fahrenheita= ");
+        fahrenheit = Convert.ToDouble(Console.ReadLine());
+		
+		celsius = (fahrenheit - 32) * 5 / 9;
+
+        Console.WriteLine(fahrenheit + " w stopniach Fahrenheita to " + celsius + " w stopniach Celsjusza.");
+        Console.ReadLine();
+		
+	}
+}
