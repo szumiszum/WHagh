@@ -1,0 +1,18 @@
+using System;
+					
+public class Program
+{
+	public static void Dodaj(out int a)
+	{
+		a=5;
+		a++;
+		Console.WriteLine("Argument z wnętrza metody: " +a);
+	}
+	public static void Main	(string[] args)
+	{
+		int a; //a =  ???
+		//Console.WriteLine("Przed wywołaniem metody: " + a);
+		Dodaj (out a);
+		Console.WriteLine("Po wywołaniu metody: " + a);
+	}
+}
