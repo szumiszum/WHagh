@@ -8,7 +8,7 @@ public class Program
 		Console.Write("Podaj liczbę: ");
 		x = int.Parse(Console.ReadLine());
  
-		//oblicz sume cyfr danej liczby calkowitej
+		//sumuje cyfry podanej liczby calkowitej
 		wynik = 0;
 		while (x != 0)
 		{
@@ -16,11 +16,12 @@ public class Program
 			x /= 10;
 		}
  
-		//podaj wynik
+		//podaje wynik
 		Console.WriteLine("Suma cyfr podanej liczby wynosi " + wynik + ".");
 	}	
 	public static void Main(string[] args)
 	{
+		//wywołuje funkcję
 		SumaCyfr();
 	}
 }
