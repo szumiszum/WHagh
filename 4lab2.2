@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void SumaCyfr()
+	{
+		int x, wynik;
+		Console.Write("Podaj liczbę: ");
+		x = int.Parse(Console.ReadLine());
+ 
+		//oblicz sume cyfr danej liczby calkowitej
+		wynik = 0;
+		while (x != 0)
+		{
+			wynik += x%10;
+			x /= 10;
+		}
+ 
+		//podaj wynik
+		Console.WriteLine("Suma cyfr podanej liczby wynosi " + wynik + ".");
+	}	
+	public static void Main(string[] args)
+	{
+		SumaCyfr();
+	}
+}
