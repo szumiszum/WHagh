@@ -1,0 +1,12 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] tablica = new string[] {"jeden", "dwa", "trzy", "cztery"};
+	
+		for (int i = 0; i < tablica.Length; i++)
+			Console.Write("{0}, ", tablica[i],".");
+	}
+}
