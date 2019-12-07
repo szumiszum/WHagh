@@ -1,0 +1,24 @@
+using System;
+					
+public class Program
+{
+	public static void Silnia()
+	{
+		int liczba, silnia = 1;
+		Console.WriteLine("Podaj liczbę: ");
+		liczba = int.Parse(Console.ReadLine());
+		
+		for (int i = 1; i <= liczba; i++)
+		{
+			silnia*=i;
+		}
+ 
+		Console.WriteLine(silnia);
+            
+	}	
+	public static void Main(string[] args)
+	{
+		//wywołuje funkcję
+		Silnia();
+	}
+}
