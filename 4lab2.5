@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Potęga()
+	{
+		int a,b, wynik;
+		
+		Console.Write("Wartość liczby: ");
+		a = int.Parse(Console.ReadLine());
+		
+		Console.Write("Potęga: ");
+		b = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("{0}^{1} = {2:N0}", a, b, (long)Math.Pow(a, b));
+		
+	}	
+	public static void Main(string[] args)
+	{
+		//wywołuje funkcję
+		Potęga();
+	}
+}
