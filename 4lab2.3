@@ -17,10 +17,23 @@ public class Program
 		//sumuje cyfry podanej liczby calkowitej
 		bool wynik; //true or false
 		wynik = (A<X && X<B) || (B<X && X<A);
-		while (wynik)
-		{
-			Console.WriteLine("Podana wartość X={0} należy do przedziału A={0}, B={0}."); 
+
+		if (wynik == true)
+		{			
+			Console.WriteLine("Podana wartość X = {0} należy do przedziału ({1}, {2}).", X, A, B);
 		}
+		else if (wynik == true & A>B)
+		{
+			Console.WriteLine("Podana wartość X = {0} należy do przedziału ({2}, {1}).", X, A, B);
+		}
+		else if (wynik == false & A<B)
+		{
+			Console.WriteLine("Podana wartość X = {0} nie należy do przedziału ({1}, {2}).", X, A, B);
+		}
+		else if (wynik == false & A>B)
+		{
+			Console.WriteLine("Podana wartość X = {0} nie należy do przedziału ({2}, {1}).", X, A, B);
+		}			
  
 	}	
 	public static void Main(string[] args)
