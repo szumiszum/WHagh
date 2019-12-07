@@ -1,0 +1,31 @@
+using System;
+					
+public class Program
+{
+	public static void PrzedziałAB()
+	{
+		double A, B, X;
+
+		// wczytywanie wartości dla A, B, X
+		Console.WriteLine("Podaj wartość A = ");
+		A = Convert.ToDouble(Console.ReadLine());
+		Console.WriteLine("Podaj wartość B = ");
+		B = Convert.ToDouble(Console.ReadLine());
+		Console.WriteLine("Podaj wartość X = ");
+		X = Convert.ToDouble(Console.ReadLine());
+ 
+		//sumuje cyfry podanej liczby calkowitej
+		bool wynik; //true or false
+		wynik = (A<X && X<B) || (B<X && X<A);
+		while (wynik)
+		{
+			Console.WriteLine("Podana wartość X={0} należy do przedziału A={0}, B={0}."); 
+		}
+ 
+	}	
+	public static void Main(string[] args)
+	{
+		//wywołuje funkcję
+		PrzedziałAB();
+	}
+}
