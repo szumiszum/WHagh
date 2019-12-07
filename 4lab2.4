@@ -1,0 +1,42 @@
+using System;
+					
+public class Program
+{
+	public static void Mnożenie()
+	{
+		int[] tablica = new int [4];
+		int[] wynik = new int[tablica.Length];
+		int i, mnożnik;
+		
+		for (i=0 ; i < 4 ; i++)
+		{	
+			Console.Write("Utwórz tablicę czterech liczb. Podaj liczbę: ");
+			tablica[i] = int.Parse(Console.ReadLine());
+		}
+		
+		Console.Write("Liczby w tablicy: ");
+		for (i=0 ; i < 4 ; i++)
+		{
+			Console.Write("{0}, ", tablica[i]);
+		}
+		
+		Console.Write("Podaj wartość mnożnika: ");
+		mnożnik = int.Parse(Console.ReadLine());
+		
+		for (i = 0 ; i < 4 ; i++)
+		{
+			wynik[i] = tablica[i] * mnożnik;
+		}
+		
+		Console.Write("Wyniki mnożenia: ");
+		for (i = 0 ; i < 4 ; i++)
+		{
+			Console.Write("{0}, ", wynik[i]);		
+		}
+	}	
+	public static void Main(string[] args)
+	{
+		//wywołuje funkcję
+		Mnożenie();
+	}
+}
