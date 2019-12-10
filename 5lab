@@ -1,0 +1,47 @@
+using System;
+					
+public class Prostokąt
+{
+	private int szerokość;
+	private int wysokość;
+	
+	public Prostokąt(int x, int y) //konstruktor
+	{
+		szerokość = x;
+		wysokość = y;
+	}
+	
+	private int powierzchnia()
+	{
+		int z = szerokość * wysokość;
+		return z;
+	}
+	
+	private int obwod()
+	{
+		int w = 2*szerokość + 2*wysokość;
+		return w;
+	}	
+	
+	/*public static void Prezentuj()
+	{		
+		int z = powierzchnia(szerokość, wysokość);
+		int w = obwod();
+		//Console.Write("Powierzchnia prostokątu wynosi: {0} " + powierzchnia(szerokość, wysokość) + ".");
+		//Console.Write("Obwód prostokątu wynosi: {0} " + w + ".");
+	}
+	*/
+ 
+}
+
+public class Program
+{	
+	public static void Main(string[] args)
+	{
+		//definiuje obiekt
+		Prostokąt p = new Prostokąt(10,10);
+		//wywołuje funkcję
+		p.Prezentuj();
+		//Console.Write();
+	}
+}
