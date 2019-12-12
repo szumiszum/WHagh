@@ -23,10 +23,10 @@ public class Prostokąt
 		return w;
 	}	
 	
-	public int Prezentuj()
+	public void Prezentuj()
 	{		
-		Console.Write("Powierzchnia prostokątu wynosi");
-		return powierzchnia();
+		Console.WriteLine($"Pole prostokąta wynosi: {powierzchnia()}");
+    Console.WriteLine($"Pole obwodu wynosi {obwod()}");
 	}
  
 }
@@ -35,7 +35,9 @@ public class Program
 {	
 	public static void Main(string[] args)
 	{
-		int a,b;
+		Console.WriteLine("Program obliczający powierzchnię i obwód prostokątu o boku a, b.");
+    
+    int a,b;
 		Console.Write("Podaj bok a: ");
 		a = int.Parse(Console.ReadLine());
 		Console.Write("Podaj bok b: ");
