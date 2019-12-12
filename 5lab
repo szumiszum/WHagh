@@ -23,14 +23,11 @@ public class Prostokąt
 		return w;
 	}	
 	
-	/*public static void Prezentuj()
+	public int Prezentuj()
 	{		
-		int z = powierzchnia(szerokość, wysokość);
-		int w = obwod();
-		//Console.Write("Powierzchnia prostokątu wynosi: {0} " + powierzchnia(szerokość, wysokość) + ".");
-		//Console.Write("Obwód prostokątu wynosi: {0} " + w + ".");
+		Console.Write("Powierzchnia prostokątu wynosi");
+		return powierzchnia();
 	}
-	*/
  
 }
 
@@ -38,10 +35,15 @@ public class Program
 {	
 	public static void Main(string[] args)
 	{
+		int a,b;
+		Console.Write("Podaj bok a: ");
+		a = int.Parse(Console.ReadLine());
+		Console.Write("Podaj bok b: ");
+		b = int.Parse(Console.ReadLine());
+		
 		//definiuje obiekt
-		Prostokąt p = new Prostokąt(10,10);
+		Prostokąt p = new Prostokąt(a,b);
 		//wywołuje funkcję
 		p.Prezentuj();
-		//Console.Write();
 	}
 }
