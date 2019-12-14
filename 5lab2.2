@@ -1,0 +1,79 @@
+using System;
+					
+public class PierwiastkiKwadratowe
+{
+	private double a, b, c;
+	
+	public void wczytywanie()
+	{
+		Console.Write("Wprowadź wartość a:");
+		a = Double.Parse(Console.ReadLine());
+		Console.Write("Wprowadź wartość b:");
+		b = Double.Parse(Console.ReadLine());
+		Console.Write("Wprowadź wartość c:");
+		c = Double.Parse(Console.ReadLine());
+	}
+	
+	public void obliczenia()
+	{
+		int m;
+        double x1, x2, delta;
+		
+		delta = b * b - 4 * a * c;
+		if (a == 0)
+			m = 1;
+		else if (delta > 0)
+			m = 2;
+		else if (delta == 0)
+			m = 3;
+		else
+			m = 4;
+		
+		switch (m)
+            {
+                case 1: Console.WriteLine("Równanie o podanych wartościach nie jest równaniem kwadratowym.");
+                    Console.ReadLine();
+                    break;
+                case 2: Console.WriteLine("Równanie ma dwa rozwiązania rzeczywiste (dwa pierwiastki rzeczywiste):");
+                    x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+                    Console.WriteLine("\n Pierwiastek x1 wynosi {0:#.##}.", x1);
+                    Console.WriteLine("\n Pierwiastek x2 wynosi {0:#.##}.", x2);
+                    Console.ReadLine();
+                    break;
+                case 3: Console.WriteLine("Równanie ma jedno rozwiązanie rzeczywiste (podwójny pierwiastek rzeczywisty):");
+                    x1 = x2 = (-b) / (2 * a);
+                    Console.WriteLine("\n Pierwiastek x1 wynosi {0:#.##}.", x1);
+                    Console.WriteLine("\n Pierwiastek x2 wynosi {0:#.##}.", x2);
+                    Console.ReadLine();
+                    break;
+                case 4: Console.WriteLine("Równanie nie ma rozwiązań rzeczywistych, jednak ma rozwiązania zespolone:");
+                    x1 = (-b) / (2 * a);
+                    x2 = Math.Sqrt(-delta) / (2 * a);
+                    Console.WriteLine("\n Pierwiastek x1 wynosi {0:#.##} + i {1:#.##}", 
+                                       x1, x2);
+                    Console.WriteLine("\n Pierwiastek x2 wynosi {0:#.##} - i {1:#.##}", 
+                                      x1, x2);
+                    Console.ReadLine();
+                    break;
+            }
+	}
+	
+	public void prezentacja()
+	{
+		Console.WriteLine("Program obliczający pierwiastki równania kwadratowego ax^2 + bx + c.");
+		wczytywanie();
+		obliczenia();
+	}	
+}
+
+
+public class Pierwiastki
+{
+	public static void Main()
+	{
+		PierwiastkiKwadratowe pk = new PierwiastkiKwadratowe();
+		pk.prezentacja();
+	}
+}
+
