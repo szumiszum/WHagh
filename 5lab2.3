@@ -16,8 +16,9 @@ public class Macierz
 				{
 					tab[i, j] = i;
 				}
-				Console.WriteLine(tab[i, j]);
+				Console.Write(tab[i, j]+"\t");
 			}
+			Console.WriteLine();
 		}
 	}
 }
@@ -26,9 +27,9 @@ public class Program
 {	
 	public static void Main(string[] args)
 	{
-
+		// definiuje klasę
 		Macierz m = new Macierz();
-		//wywołuje funkcję
+		// wywołuje funkcję
 		m.macierz();
 	}
 }
