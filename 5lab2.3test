@@ -1,0 +1,71 @@
+using System;
+					
+public class Macierz
+{
+	public void macierz()
+	{
+		int size = 10;
+		int[,] tab = new int[size, size];
+		int i, j;
+		Random rnd = new Random();
+		
+		for (m = 1; m<4, m++)
+		{
+			m = rnd.Next; // losowanie przypadku macierzy
+		}
+		
+		switch (m)
+		{
+		case 1:
+			for(i=0; i<size; i++)
+			{
+				for(j=0; j<size; j++)
+				{
+					if (i==j)
+					{
+						tab[i, j] = i;
+					}
+				Console.Write(tab[i, j]+"\t");
+			}
+			Console.WriteLine();
+			break;
+		case 2:
+			for(i=0; i<size; i++)
+			{
+				for(j=size; j<0; j--)
+				{
+					if (i==j)
+					{
+						tab[i, j] = i;
+					}
+				Console.Write(tab[i, j]+"\t");
+			}
+			Console.WriteLine();
+			break;
+		case 3:
+			for(i=0; i<size; i++)
+			{
+				for(j=size; j<0; j--)
+				{
+					if (i==j)
+					{
+						tab[i, j] = i;
+					}
+				Console.Write(tab[i, j]+"\t");
+			}
+			Console.WriteLine();
+			break;
+		}
+	}
+}
+
+public class Program
+{	
+	public static void Main(string[] args)
+	{
+		// definiuje klasę
+		Macierz m = new Macierz();
+		// wywołuje funkcję
+		m.macierz();
+	}
+}
