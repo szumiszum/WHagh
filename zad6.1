@@ -1,0 +1,43 @@
+using System;
+					
+public class EvenNumbers
+{
+	public int a, b;
+	
+	public void data()
+	{
+		Console.Write("a=:");
+		a = Convert.ToInt32(Console.ReadLine());
+		Console.Write("b=:");
+		b = Convert.ToInt32(Console.ReadLine());
+	}
+	
+	public void evennumber()
+	{	
+		double i;
+		
+		Console.WriteLine("Even Numbers from {0} to {1}:", a,b);
+		for (i = a; i < b ; i++)
+		{
+			if (i % 2 == 0)
+               Console.Write(i + ", ");
+		}
+		Console.WriteLine();
+	}
+	
+	public void show()
+	{
+		Console.WriteLine("Program showing all the even numbers from (a,b).");
+		data();
+		evennumber();
+	}
+}
+
+public class Program
+{
+	public static void Main()
+	{
+		EvenNumbers en = new EvenNumbers();
+		en.show();
+	}
+}
